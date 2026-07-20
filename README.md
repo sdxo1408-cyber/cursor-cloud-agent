@@ -13,6 +13,12 @@ uv sync
 2. Add your Anthropic API key:
 
 ```bash
+uv run chatbot setup
+```
+
+This saves your key to `.env` (gitignored). You can also copy the template manually:
+
+```bash
 cp .env.example .env
 # Edit .env and set ANTHROPIC_API_KEY
 ```
@@ -21,6 +27,7 @@ Or export it directly:
 
 ```bash
 export ANTHROPIC_API_KEY='your-api-key-here'
+uv run chatbot setup --from-env
 ```
 
 Get an API key from the [Anthropic Console](https://console.anthropic.com/).
